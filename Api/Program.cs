@@ -36,7 +36,7 @@ app.MapGet("/translations", (string languageCode) =>
         translations.Add("HideCounter", "Hide counter");
         return translations;
     }
-    else
+    else if (languageCode == "no")
     {
         var translations = new Dictionary<string, string>();
         translations.Add("Greeting", "Heisann og hoppsann!");
@@ -44,6 +44,16 @@ app.MapGet("/translations", (string languageCode) =>
         translations.Add("CurrentNumber", "Nåværende tall er");
         translations.Add("Add", "Legg til");
         translations.Add("HideCounter", "Gjem telleren");
+        return translations;
+    }
+    else
+    {
+        var translations = new Dictionary<string, string>();
+        translations.Add("Greeting", "Greeting");
+        translations.Add("Farewell", "Farewell");
+        translations.Add("CurrentNumber", "CurrentNumber");
+        translations.Add("Add", "Add");
+        translations.Add("HideCounter", "HideCounter");
         return translations;
     }
 })

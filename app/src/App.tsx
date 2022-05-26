@@ -22,6 +22,7 @@ function App() {
 
       <button onClick={() => onChangeLanguage("en")}>Set to English</button>
       <button onClick={() => onChangeLanguage("no")}>Set to Norwegian</button>
+      <button onClick={() => onChangeLanguage("ungabunga")}>Set to Unknown</button>
       {!hideCounter && <button onClick={() => setCount(count + 1)}>{t("Add")}</button>}
       <button onClick={() => setHideCounter(!hideCounter)}>{t("HideCounter")}</button>
     </div>
