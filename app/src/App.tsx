@@ -3,11 +3,13 @@ import logo from './logo.svg'
 import './App.css'
 import { useTranslation } from 'react-i18next'
 import { currentNumber } from './helpers'
+import SampleForm from './SampleForm'
 
 function App() {
   const [count, setCount] = useState(0)
   const { t, i18n } = useTranslation();
   const [hideCounter, setHideCounter] = useState(false);
+  const [showForm, setShowForm] = useState(true);
 
   const onChangeLanguage = (language: string) => {
     console.log("changing lang");
@@ -25,6 +27,8 @@ function App() {
       <button onClick={() => onChangeLanguage("ungabunga")}>Set to Unknown</button>
       {!hideCounter && <button onClick={() => setCount(count + 1)}>{t("Add")}</button>}
       <button onClick={() => setHideCounter(!hideCounter)}>{t("HideCounter")}</button>
+      {showForm && <SampleForm />}
+      <button onClick={() => setShowForm(!showForm)}>{t("ShowForm")}</button>
     </div>
   )
 }

@@ -8,11 +8,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "^2.8.10",
     "i18next": "^21.8.4",
     "i18next-http-backend": "^1.4.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-i18next": "^11.16.9"
+    "react-hook-form": "^7.31.2",
+    "react-i18next": "^11.16.9",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",

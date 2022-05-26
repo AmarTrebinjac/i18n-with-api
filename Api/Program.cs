@@ -34,6 +34,8 @@ app.MapGet("/translations", (string languageCode) =>
         translations.Add("CurrentNumber", "Current number is");
         translations.Add("Add", "Add");
         translations.Add("HideCounter", "Hide counter");
+        translations.Add("Required", "Field is Required");
+        translations.Add("ShowForm", "Show form");
         return translations;
     }
     else if (languageCode == "no")
@@ -44,6 +46,8 @@ app.MapGet("/translations", (string languageCode) =>
         translations.Add("CurrentNumber", "Nåværende tall er");
         translations.Add("Add", "Legg til");
         translations.Add("HideCounter", "Gjem telleren");
+        translations.Add("Required", "Feltet er obligatorisk");
+        translations.Add("ShowForm", "Vis skjemaet");
         return translations;
     }
     else
@@ -54,6 +58,7 @@ app.MapGet("/translations", (string languageCode) =>
         translations.Add("CurrentNumber", "CurrentNumber");
         translations.Add("Add", "Add");
         translations.Add("HideCounter", "HideCounter");
+        translations.Add("Required", "Required");
         return translations;
     }
 })
